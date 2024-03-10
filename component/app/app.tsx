@@ -2,6 +2,7 @@
 import styles from './app.module.css'
 import { useState } from 'react'
 import { getResult} from '../../services/ApiWrapper'
+
 import { ChangeEvent } from 'react';
 
 export default function App() {
@@ -65,7 +66,7 @@ export default function App() {
     <textarea id="writing_space" onChange={e => setWriting(e.target.value)} placeholder="write your content here"/>
 </div>
 <div className={styles.response_area}>
-    <textarea id="writing_space" onChange={e => setResponse(e.target.value)} value={response}  placeholder="AI response"/>
+    <textarea id="response_space" onChange={e => setResponse(e.target.value)} value={response}  placeholder="AI response"/>
 </div>
         </div>  
     )

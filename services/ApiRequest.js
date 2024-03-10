@@ -31,7 +31,7 @@ export const getStyledText = async (content, context) => {
             promptValue += `Summarize the below content. \n "${content}"`;
             break;
         case "vocab":
-            promptValue += `Provide some good vocabulary suggestions for the below content as a list of words with their mapping from existing words in article. \n "${content}"`;
+            promptValue += `Use better vocab for content below. \n "${content}"`;
             break;
         case "improve":
             promptValue += `Improve the below content by making it even better. \n "${content}"`;
@@ -49,7 +49,7 @@ export const getStyledText = async (content, context) => {
  * @param {*} context 
  * @returns 
  */
-export const getTonesSuggestion = async (content, context) => {
+export const getToneSuggestion = async (content, context) => {
     const tonePrompt = `Paraphrase below text in ${context} tone. \n "${content}"`
     const toneContent = openAIChatWrapper(tonePrompt);
     return toneContent;
